@@ -12,7 +12,7 @@ services:
         CERTBOT_EMAIL: owner@company.com
     volumes:
       - ./conf.d:/etc/nginx/user.conf.d:ro
-      # - letsencrypt:/etc/letsencrypt
+      - letsencrypt:/etc/letsencrypt
 
   # nginx:
   #   container_name: nginx
@@ -51,3 +51,6 @@ services:
     #- "STANDALONE=true"
     #- "MIRROR_SOURCE=https://registry-1.docker.io"
     #- "MIRROR_SOURCE_INDEX=https://index.docker.io"
+
+volumes:
+    letsencrypt:
